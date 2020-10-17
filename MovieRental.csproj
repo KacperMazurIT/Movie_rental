@@ -175,8 +175,35 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010170928503_CreateDatabase.cs" />
+    <Compile Include="Migrations\202010170928503_CreateDatabase.Designer.cs">
+      <DependentUpon>202010170928503_CreateDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010170932031_SeedMembershipTypeTable.cs" />
+    <Compile Include="Migrations\202010170932031_SeedMembershipTypeTable.Designer.cs">
+      <DependentUpon>202010170932031_SeedMembershipTypeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010171014046_SeedMemberShipType.cs" />
+    <Compile Include="Migrations\202010171014046_SeedMemberShipType.Designer.cs">
+      <DependentUpon>202010171014046_SeedMemberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010171033022_AddBirthData.cs" />
+    <Compile Include="Migrations\202010171033022_AddBirthData.Designer.cs">
+      <DependentUpon>202010171033022_AddBirthData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010171101072_AddGenreTable.cs" />
+    <Compile Include="Migrations\202010171101072_AddGenreTable.Designer.cs">
+      <DependentUpon>202010171101072_AddGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010171101328_SeedGenre.cs" />
+    <Compile Include="Migrations\202010171101328_SeedGenre.Designer.cs">
+      <DependentUpon>202010171101328_SeedGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -263,6 +290,26 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202010170928503_CreateDatabase.resx">
+      <DependentUpon>202010170928503_CreateDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010170932031_SeedMembershipTypeTable.resx">
+      <DependentUpon>202010170932031_SeedMembershipTypeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010171014046_SeedMemberShipType.resx">
+      <DependentUpon>202010171014046_SeedMemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010171033022_AddBirthData.resx">
+      <DependentUpon>202010171033022_AddBirthData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010171101072_AddGenreTable.resx">
+      <DependentUpon>202010171101072_AddGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010171101328_SeedGenre.resx">
+      <DependentUpon>202010171101328_SeedGenre.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
