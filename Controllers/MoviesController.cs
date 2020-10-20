@@ -25,9 +25,7 @@ namespace MovieRental.Controllers
 
         public ViewResult Index()
         {
-            var movies = db.Movies.Include(m => m.Genre).ToList();
-
-            return View(movies);
+            return View();
         }
 
         public ActionResult New()
