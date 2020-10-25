@@ -19,7 +19,7 @@ namespace MovieRental.Controllers.Api
         }
 
         [HttpPost]
-        IHttpActionResult CreateNewRentals(NewRentalDto newRental)
+        public IHttpActionResult CreateNewRentals(NewRentalDto newRental)
         {
             var customer = db.Customers.Single(
                 c => c.Id == newRental.CustomerId
