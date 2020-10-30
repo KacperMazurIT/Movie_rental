@@ -605,6 +605,22 @@
     <Compile Include="Migrations\202010251713089_AddNumberAvailable.Designer.cs">
       <DependentUpon>202010251713089_AddNumberAvailable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010252256417_dropColumnNumberAvailable.cs" />
+    <Compile Include="Migrations\202010252256417_dropColumnNumberAvailable.Designer.cs">
+      <DependentUpon>202010252256417_dropColumnNumberAvailable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010252257544_AddColumnNumberAvailable.cs" />
+    <Compile Include="Migrations\202010252257544_AddColumnNumberAvailable.Designer.cs">
+      <DependentUpon>202010252257544_AddColumnNumberAvailable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010252305398_AddColumnNumberAvailable1.cs" />
+    <Compile Include="Migrations\202010252305398_AddColumnNumberAvailable1.Designer.cs">
+      <DependentUpon>202010252305398_AddColumnNumberAvailable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010252311051_AddColumnNumberAvailable2.cs" />
+    <Compile Include="Migrations\202010252311051_AddColumnNumberAvailable2.Designer.cs">
+      <DependentUpon>202010252311051_AddColumnNumberAvailable2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -926,6 +942,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010251713089_AddNumberAvailable.resx">
       <DependentUpon>202010251713089_AddNumberAvailable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010252256417_dropColumnNumberAvailable.resx">
+      <DependentUpon>202010252256417_dropColumnNumberAvailable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010252257544_AddColumnNumberAvailable.resx">
+      <DependentUpon>202010252257544_AddColumnNumberAvailable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010252305398_AddColumnNumberAvailable1.resx">
+      <DependentUpon>202010252305398_AddColumnNumberAvailable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010252311051_AddColumnNumberAvailable2.resx">
+      <DependentUpon>202010252311051_AddColumnNumberAvailable2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

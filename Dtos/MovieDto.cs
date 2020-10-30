@@ -25,5 +25,7 @@ namespace MovieRental.Dtos
 
         [Range(1, 20)]
         public byte NumberInStock { get; set; }
+
+        public byte MyProperty { get; set; }
     }
 }

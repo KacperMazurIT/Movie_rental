@@ -49,6 +49,7 @@ namespace MovieRental.Controllers.Api
                 return BadRequest();
 
             var movie = Mapper.Map<MovieDto, Movie>(movieDto);
+            movie.NumberAvailable = movie.NumberInStock;
             db.Movies.Add(movie);
             db.SaveChanges();
 
