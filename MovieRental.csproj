@@ -621,6 +621,14 @@
     <Compile Include="Migrations\202010252311051_AddColumnNumberAvailable2.Designer.cs">
       <DependentUpon>202010252311051_AddColumnNumberAvailable2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011241640375_AddNewRentalTable.cs" />
+    <Compile Include="Migrations\202011241640375_AddNewRentalTable.Designer.cs">
+      <DependentUpon>202011241640375_AddNewRentalTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011241644200_AddNewRentalTable1.cs" />
+    <Compile Include="Migrations\202011241644200_AddNewRentalTable1.Designer.cs">
+      <DependentUpon>202011241644200_AddNewRentalTable1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -630,6 +638,7 @@
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NewRental.cs" />
     <Compile Include="Models\Rental.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -954,6 +963,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010252311051_AddColumnNumberAvailable2.resx">
       <DependentUpon>202010252311051_AddColumnNumberAvailable2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011241640375_AddNewRentalTable.resx">
+      <DependentUpon>202011241640375_AddNewRentalTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011241644200_AddNewRentalTable1.resx">
+      <DependentUpon>202011241644200_AddNewRentalTable1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

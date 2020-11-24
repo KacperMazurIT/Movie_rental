@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using MovieRental.Models;
 using MovieRental.ViewModels;
 using System.Data.Entity;
+using Microsoft.AspNet.Identity;
 
 namespace MovieRental.Controllers
 {
@@ -60,6 +61,26 @@ namespace MovieRental.Controllers
 
             return View("MovieForm", viewModel);
         }
+
+        public ActionResult Rent(int id)
+        {
+            var currentUser = User.Identity.GetUserName();
+            var movieName = db.Movies.Where(m => m.Id == id).Select(m => m.Name).SingleOrDefault();
+
+            var newRental = new NewRental()
+            {
+                MovieName = movieName,
+                UserName = currentUser,
+                DateRented = DateTime.Now,
+            };
+
+            db.NewRentals.Add(newRental);
+
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Movies");
+        }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

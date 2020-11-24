@@ -10,6 +10,7 @@
         <tr>
             <th>Movie</th>
             <th>Genre</th>
+            <th>Rent</th>
         </tr>
     </thead>
     <tbody>
@@ -30,8 +31,25 @@
                     },
                     {
                         data: "genre.name"
-                    } 
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<button class='btn btn-primary' data-rent-movie-id=" + data + ">Rent</button>";
+                        }
+                    }
                 ]
+            });
+            $("#movies").on("click", ".btn-primary", function () {
+                var button = $(this);
+                bootbox.confirm("Are you sure you want to rent this movie?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/movies/Rent/" + button.attr("data-rent-movie-id"),
+                            method: "POST",
+                        });
+                    }
+                });
             });
         });
     </script>

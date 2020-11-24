@@ -34,6 +34,7 @@ namespace MovieRental.Models
         public DbSet<MembershipType> MembershipTypes { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Rental> Rentals { get; set; }
+        public DbSet<NewRental> NewRentals { get; set; }
 
 
         public ApplicationDbContext()
