@@ -36,6 +36,7 @@ namespace MovieRental.Models
         public DbSet<Rental> Rentals { get; set; }
         public DbSet<NewRental> NewRentals { get; set; }
 
+        public DbSet<ActorsInMovie> ActorsInMovies { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

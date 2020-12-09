@@ -1,0 +1,31 @@
+namespace MovieRental.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class newTable : DbMigration
+    {
+        public override void Up()
+        {
+            CreateTable(
+                "dbo.ActorsInMovies",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        ActorName = c.String(nullable: false, maxLength: 255),
+                        MovieId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Movies", t => t.MovieId, cascadeDelete: true)
+                .Index(t => t.MovieId);
+            
+        }
+        
+        public override void Down()
+        {
+            DropForeignKey("dbo.ActorsInMovies", "MovieId", "dbo.Movies");
+            DropIndex("dbo.ActorsInMovies", new[] { "MovieId" });
+            DropTable("dbo.ActorsInMovies");
+        }
+    }
+}

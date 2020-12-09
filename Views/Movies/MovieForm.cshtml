@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Movie</h2>
+<h2>New Movie First Step</h2>
 
 @using (Html.BeginForm("Save", "Movies"))
 {
@@ -18,6 +18,13 @@
         @Html.LabelFor(m => m.ReleaseDate)
         @Html.TextBoxFor(m => m.ReleaseDate, "{0:d MMM yyyy}", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.ReleaseDate)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ActorId)
+        @Html.DropDownListFor(m => m.ActorId,
+        new SelectList(Model.Customers, "Id", "Name"),
+        "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ActorId)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.GenreId)
@@ -34,7 +41,7 @@
 
     @Html.HiddenFor(m => m.Id)
     @Html.AntiForgeryToken()
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-primary">Next Step</button>
 
 }
 
@@ -42,4 +49,5 @@
 {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
 

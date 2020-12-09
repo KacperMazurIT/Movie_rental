@@ -1,0 +1,23 @@
+﻿@model MovieRental.Models.ActorsInMovie
+@{
+
+    Layout = null;
+}
+
+@using (Html.BeginForm("AddOrEdit", "Movies" @*,new { id = Model.MovieId }*@, FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+
+    @Html.HiddenFor(model => model.MovieId)
+    <div class="form-group">
+        @Html.LabelFor(model => model.ActorName, new { @class = "control-label" })
+        @Html.EditorFor(model => model.ActorName, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.ActorName)
+    </div>
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+
+        <input type="submit" value="Submit" class="btn btn-success" />
+        <input type="reset" value="Reset" class="btn btn-warning" />
+    </div>
+}  

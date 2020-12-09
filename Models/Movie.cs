@@ -20,6 +20,11 @@ namespace MovieRental.Models
         [Required]
         public byte GenreId { get; set; }
 
+        public Customer Customer { get; set; }
+
+        [Display(Name = "Actor")]
+        public int ActorId { get; set; }
+
         public DateTime DateAdded { get; set; }
 
         [Display(Name = "Release Date")]

@@ -10,6 +10,9 @@ namespace MovieRental.ViewModels
     public class MovieFormViewModel
     {
         public IEnumerable<Genre> Genres { get; set; }
+
+        public IEnumerable<Customer> Customers { get; set; }
+
         public Movie Movie { get; set; }
 
         public int? Id { get; set; }
@@ -21,6 +24,10 @@ namespace MovieRental.ViewModels
         [Display(Name = "Genre")]
         [Required]
         public byte? GenreId { get; set; }
+
+        [Display(Name = "Actor")]
+        [Required]
+        public int? ActorId { get; set; }
 
         [Display(Name = "Release Date")]
         [Required]
@@ -54,6 +61,7 @@ namespace MovieRental.ViewModels
             ReleaseDate = movie.ReleaseDate;
             NumberInStock = movie.NumberInStock;
             GenreId = movie.GenreId;
+            ActorId = movie.ActorId;
         }
 
 
